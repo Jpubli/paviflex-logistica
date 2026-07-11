@@ -101,7 +101,7 @@ if uploaded is not None:
             'Peso (kg)': f"{r['peso_neto_kg']:,.1f}",
             'Pallets': r['pallets'],
         } for r in logistica['resultados']])
-        st.dataframe(df, width='stretch', hide_index=True)
+        st.dataframe(df, use_container_width=True, hide_index=True)
 
         # Pallets
         st.markdown("### 📦 Distribución de pallets")
